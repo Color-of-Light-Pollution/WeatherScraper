@@ -70,13 +70,13 @@ public class WebScraper {
 		matcher = Pattern.compile("\\d*° .* Day").matcher(weatherHtml.get(0));
 		if  (matcher.find()) {
 			String chunk = matcher.group();
-			matchedStrings.add(chunk.substring(0,2));
-			matchedStrings.add(chunk.substring(4, chunk.length()-4));
+			cleanedMatchedStrings.add(chunk.substring(0,2));
+			cleanedMatchedStrings.add(chunk.substring(4, chunk.length()-4));
 		}
 		//AQI -- 16
 		matcher = Pattern.compile("Air Quality Index \\d*").matcher(weatherHtml.get(1));
 		if  (matcher.find()) {
-			matchedStrings.add(matcher.group().substring(18));
+			cleanedMatchedStrings.add(matcher.group().substring(18));
 		}
 		//everything else
 		String str, matched = "";
