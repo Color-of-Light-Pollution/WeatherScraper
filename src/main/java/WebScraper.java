@@ -14,11 +14,8 @@ import java.util.regex.Pattern;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
-/**
- * @author acelaena
- *
- * Web Scraper to grab weather data from Weather.com.
- */
+@SuppressWarnings("javadoc")
+
 public class WebScraper {
 	/**
 	 *  Static function to visit a specified Weather.com webpage to gather data.
